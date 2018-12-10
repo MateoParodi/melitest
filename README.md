@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `npm run build` to run `ng build && node server.js`. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
+Run `npm run build` to run `ng build && node server.js`. Navigate to `http://localhost:3000/`. Or `npm run build-prod` to build the app wit `AOT`.
 
 ## Code scaffolding
 

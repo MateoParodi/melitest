@@ -10,7 +10,7 @@ import { MeliSearchService } from 'src/app/services/meli-search.service';
 export class ProductComponent {
   @Input() productData: any;
 
-  constructor(private searchService: MeliSearchService) {
+  constructor(public searchService: MeliSearchService) {
 
   }
 
