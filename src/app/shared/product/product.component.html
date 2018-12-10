@@ -1,0 +1,16 @@
+<div class="product">
+  <img class="product__thumbnail" [src]="productData.picture">
+  <div class="product__description">
+    <div class="product__price">
+      <p class="product__price-text">{{searchService.buildPrice(productData.price)}}</p>
+      <img *ngIf="productData.free_shipping" src="assets/ic_shipping.png" alt="free_shipping" title="Entrega Gratis">
+    </div>
+    <div class="product__location">
+      <span>Mendoza</span>
+    </div>
+    <div class="product__info">
+      <h2 class="product__info-title">{{productData.title}}</h2>
+      <p class="product__info-subtitle">Completo Unico!</p>
+    </div>
+  </div>
+</div>

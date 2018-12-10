@@ -1,0 +1,13 @@
+@import "../settings/colors";
+.btn {
+  border: none;
+  width: 190px;
+  background-color: $meli-blue;
+  color: $meli-white;
+  height: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: $meli-dark-blue;
+  }
+}

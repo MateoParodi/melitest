@@ -1,0 +1,39 @@
+@import "../styles/styles";
+
+@font-face {
+  font-family: proximaNova;
+  src: url('/assets/FontsFree-Net-proxima_nova_reg-webfont.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $meli-light-gray;
+  font-family: proximaNova;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5% 30px 5%;
+  &__container {
+    background-color: $meli-white;
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+@media(min-width: map-get($meli-breakpoints, 'md')){
+  .app {
+    margin: 0 10% 30px 10%;
+  }
+}
+
+@media(min-width: map-get($meli-breakpoints, 'lg')){
+  .app {
+    margin: 0 20% 30px 20%;
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../../styles/settings/colors";
+@import "../../../styles/settings/variables";
+
+.product {
+  display: flex;
+  border-bottom: 1px solid $meli-light-gray;
+  cursor: pointer;
+  padding: 12px;
+  &:hover {
+    border: 1px solid $meli-light-gray;
+  }
+  &__thumbnail {
+    height: 180px;
+    width: 180px;
+    border-radius: 13px;
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  &__price {
+    display: flex;
+    box-sizing: border-box;
+  }
+  &__location {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+  &__price-text {
+    font-weight: bold;
+    margin: 0 12px 0 0;
+  }
+  &__info-title {
+    margin: 0;
+    font-size: 14px;
+  }
+  &__info-subtitle {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+@media(min-width: map-get($meli-breakpoints, 'md')){
+  .product {
+    &__location {
+      text-align: right;
+    }
+  }
+}

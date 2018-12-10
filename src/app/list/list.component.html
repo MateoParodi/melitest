@@ -1,0 +1,12 @@
+<section class="item-list">
+  <div class="item-list__container" *ngIf="!error; else errorTemplate">
+    <app-product (click)="navigateToProductDetails(product)" *ngFor="let product of products | slice:0:4" [productData]="product"></app-product>
+  </div>
+  <ng-template #errorTemplate>
+    <div class="error">
+      <img class="error__error-image" src="assets/warning-error-svgrepo-com.svg" alt="">
+      <h2 class="error__error-title">Ha ocurrido un error</h2>
+      <p class="error__error-subtitle">Por favor, intentá de nuevo en unos minutos.</p>
+    </div>
+    </ng-template>
+</section>

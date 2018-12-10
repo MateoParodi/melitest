@@ -1,0 +1,24 @@
+<section class="item" *ngIf="!error; else errorTemplate">
+  <div class="item__container" *ngIf="product">
+    <div class="item__information">
+      <img class="item__image" [src]="product.picture">
+      <div class="item__information-content">
+        <span class="item__information-condition">{{conditionsMap[product.condition]}} - {{product.sold_quantity}} vendidos</span>
+        <h3>{{product.title}}</h3>
+        <h2 class="item__information-price">{{searchService.buildPrice(product.price)}}</h2>
+        <button class="btn item__button">Comprar</button>
+      </div>
+    </div>
+    <div class="item__description">
+      <h2 class="item__description-title">Descripción del producto</h2>
+      <p class="item__description-text">{{product.description}}</p>
+    </div>
+  </div>
+</section>
+<ng-template #errorTemplate>
+  <div class="error">
+    <img class="error__error-image" src="assets/warning-error-svgrepo-com.svg" alt="">
+    <h2 class="error__error-title">Ha ocurrido un error</h2>
+    <p class="error__error-subtitle">Por favor, intentá de nuevo en unos minutos.</p>
+  </div>
+</ng-template>
