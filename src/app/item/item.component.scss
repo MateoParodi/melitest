@@ -3,6 +3,7 @@
 .item {
   display: flex;
   flex-direction: column;
+  margin: 10px;
   &__information {
     display: flex;
     flex-direction: column;
@@ -33,6 +34,7 @@
     margin: 0;
     font-size: 14px;
     color: #a19d9d;
+    white-space: pre-line;
   }
 }
 
