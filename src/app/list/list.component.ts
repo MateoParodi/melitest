@@ -20,6 +20,9 @@ export class ListComponent implements OnInit {
     private router: Router,
     private loader: LoaderService) { }
 
+  /**
+   * Subscription to the router params to search every time params change.
+   */
   ngOnInit() {
     this.query = this.route.snapshot.params['query'];
 
@@ -29,10 +32,19 @@ export class ListComponent implements OnInit {
     });
   }
 
-  navigateToProductDetails(product: IItem) {
-    this.router.navigate(['/items', product.id]);
+  /**
+   * Navigate to item information screen when user clicks on a product.
+   * @param id String id of the product.
+   */
+  navigateToProductDetails(id: string) {
+    this.router.navigate(['/items', id]);
   }
 
+  /**
+   * Calls the service to get the products depending on what the user typed.
+   * In case of succes it stops the spinner and shows the product list.
+   * In case of failure, it shows an error.
+   */
   private search() {
     this.loader.show();
     this.error = false;

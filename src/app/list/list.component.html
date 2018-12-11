@@ -1,6 +1,6 @@
 <section class="item-list">
   <div class="item-list__container" *ngIf="!error; else errorTemplate">
-    <app-product (click)="navigateToProductDetails(product)" *ngFor="let product of products | slice:0:4" [productData]="product"></app-product>
+    <app-product (click)="navigateToProductDetails(product.id)" *ngFor="let product of products | slice:0:4" [productData]="product"></app-product>
   </div>
   <ng-template #errorTemplate>
     <div class="error">

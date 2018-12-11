@@ -10,11 +10,7 @@ export const CurrencySigns = {
 export interface IItem {
   id: string;
   title: string;
-  price: {
-    currency: string;
-    amount: number;
-    decimals: number;
-  };
+  price: IPrice;
   picture: string;
   condition: string;
   free_shipping: boolean;
@@ -45,4 +41,10 @@ export interface IItems {
     lastname: string;
   };
   items: IItem[];
+}
+
+export interface IPrice {
+  currency: string;
+  amount: number;
+  decimals: number;
 }

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CurrencySigns } from 'src/app/services/meli.model';
+import { IItem } from 'src/app/services/meli.model';
 import { MeliSearchService } from 'src/app/services/meli-search.service';
 
 @Component({
@@ -8,10 +8,8 @@ import { MeliSearchService } from 'src/app/services/meli-search.service';
   styleUrls: ['product.component.scss']
 })
 export class ProductComponent {
-  @Input() productData: any;
+  @Input() productData: IItem;
 
-  constructor(public searchService: MeliSearchService) {
-
-  }
+  constructor(public searchService: MeliSearchService) { }
 
 }
